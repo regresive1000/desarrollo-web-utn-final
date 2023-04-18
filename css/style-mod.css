@@ -1,0 +1,277 @@
+* {
+    font-family: 'Playfair Display', serif;
+    
+}
+
+#navegador {
+    display: flex;
+}
+
+
+section.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    z-index: 1;
+    margin: auto;
+}
+
+h1 {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+b {
+    font-weight: 600;
+}
+
+.btn {
+    color: rgb(19, 18, 18);
+}
+
+.btn:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* Carrito */
+    #chart-result {
+        
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .chart-product {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        text-align: center;
+        align-items: center;
+        font-size: 1.5rem;
+        background-color: white;
+        border-bottom: 1px rgba(128, 128, 128, 0.152) solid;
+        height: fit-content;
+    }
+
+    .chart-img {
+        width: 5rem;
+        padding: 0.3rem;
+    }
+    .chart-title {
+        width: 180px;
+        padding: 1em;
+        margin: 0;
+    }
+    .chart-price {
+        padding: 1em;
+        font-size: 1rem;
+        margin: 0;
+    }
+    .chart-qty {
+        display: flex;
+    }
+    .chart-qty p{
+        display: flex;
+        padding: 0.2rem;
+        margin: 0;
+    }
+    .chart-qty button {
+        padding: 0.3em;
+    }
+
+    .chart-remove {
+        align-self: flex-start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        right: 0;
+        top: 0;
+        
+        font-size: 0.6rem;
+        width: 10px;
+        padding: 5px 10px;
+        
+    }
+
+    .columna-carrito {
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        
+    }
+
+    .empty-chart {
+        width: 100%;
+    }
+
+    .img-cart {
+        width: 40px;
+    }
+
+/* BTN's */
+.btn-mod {
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.btn-mod-login {
+    width: 40%;
+}
+
+
+/* Navbar */
+
+    .hidde-navbar-section {
+        align-self: center;
+    }
+
+    .navbar-div-ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul#ul-navbar {
+        
+        margin-right: auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Li navbar */
+
+    a.nav-link {
+        text-align: center;
+    }
+
+
+
+
+        @media(max-width: 767px) {
+            .navbar-div-ul {
+                justify-content: center;
+                padding: 1rem;
+                background-color: beige;
+                border-radius: 0;
+            }
+
+            .btn-mod-login {
+                width: 100%;
+            }
+
+            #chart-btn {
+                width: 80%;
+                text-align: center;
+            }
+        }
+
+        @media(min-width: 768px) {
+            nav.navbar {
+                display: flex;
+                justify-content: center;
+            }
+
+            div.ul-links {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+
+/*separador Quienes somos*/
+
+        #separador_del_medio {
+            margin-top: 0;
+        }
+
+        #container {
+            margin-top: 0;
+            padding-bottom: 5rem;
+        }
+
+/* section de cards */
+
+        #articulos {
+            min-height: fit-content;
+        }
+
+/* cards */
+
+    .card {
+        width: 18rem;
+        height: 40rem;
+        margin: 1rem;
+        justify-content: center;
+        align-items: center;
+        box-sizing: content-box;
+        border: 1px solid rgba(197, 190, 190, 0.671);
+    }
+
+    .card img {
+        margin: 2rem 0rem;
+        height: 150px;
+        width: auto; 
+    
+    }
+
+    .card-body {
+        padding: 0;
+        margin: 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-title {
+        height: 130px;
+    }
+
+    .card-text {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .card-price {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+
+/* section map */
+
+    .section-map, .section-text-map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 50rem;
+        flex-direction: column;
+    }
+
+    .section-map iframe {
+        height: 80%;
+    }
+
+    .p-section-map {
+        margin-bottom: 5rem;
+        font-size: 24px;
+    }
+
+
+
+
+
+
+
