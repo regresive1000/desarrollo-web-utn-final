@@ -27,44 +27,48 @@
 
     <div id="container-login" class="row login">
       <div class="container-todo display">
-
-        <div class="container__login__register display">
+        <div class="fondo_login">
+          <img src="assets/fondo_login.jpg" alt="">
+        </div>
+        <div id="container__login__register"class="container__login__register display">
           <div class="caja-trasera">
             <div id="iniciar-sesion" class="caja-trasera__login caja-trasera__login-register display">
-              <div id="" class="caja-trasera__login-contenedor">
-                <h1>¿ya tienes una cuenta?</h1>
-                <h2>inicia sesion para entrar en la pagina</h2>
-                <button onclick="iniciaSesion()">inicia sesion</button>
+              <div id="caja-trasera__login-contenedor" class="caja-trasera__login-contenedor">
+                <h2>¿Ya tienes una cuenta?</h2>
+                <h2>Inicia sesion para entrar en la pagina</h2>
+                <button class="btn"onclick="iniciaSesion()">inicia sesion</button>
               </div>
             </div>
             <div id="caja-trasera__register" class="caja-trasera__register caja-trasera__login-register display">
               <div id="iniciar-registro" class="caja-trasera__login-contenedor">
-                <h1>¿aun no tienes una cuenta?</h1>
-                <h2>registrate para que puedas iniciar sesion</h2>
-                <h3 onclick="registrarse()">haz click aqui para registrarte</h3>
-              </div>
+                
+                  <h2>¿Aún no tienes una cuenta?</h2>
+                <h2>Registrate para que puedas iniciar sesion</h2>
+                <button class="btn"onclick="registrarse()"> Haz click aqui para registrarte</button>
+          
+                 </div>
             </div>
           </div>
           <div id="formularios" class="formularios display">
             <div id="register" class=" container__register container__login-register display">
               <form class="cajas display" action="asd">
-                <h1>registrarse</h1>
-                <input type="text" value="nombre">
-                <input type="email" value="correo electronico">
+                <h2>registrarse</h2>
+                <input type="text" value="" placeholder="nombre" required>
+                <input type="email" value="" placeholder="email"required>
                 <h4>escribe una contraceña</h4>
-                <input type="password" value="">
+                <input type="password" value="" placeholder="password"required>
                 <h4>confirme su contraceña nuevamente</h4>
-                <input type="password" value="" name="" id="">
-                <button>registrarse</button>
+                <input type="password" value="" name="" id=""required >
+                <button class="btn">registrarse</button>
                 <h5 onclick="finalizarLogin()">quizas en otro momento</h5>
               </form>
             </div>
             <div id="login" class=" container__login container__login-register display">
               <form class="cajas  display" action="">
-                <h1>iniciar sesion</h1>
-                <input type="text" value="usuario">
-                <input type="password" value="">
-                <button>login</button>
+                <h2>iniciar sesion</h2>
+                <input type="text" value="" placeholder="nombre de usuario"required>
+                <input type="password" value="" placeholder="constraceña"required>
+                <button class="btn">login</button>
                 <h5 onclick="finalizarLogin()">quizas en otro momento</h5>
               </form>
             </div>
@@ -161,10 +165,11 @@
     <!--Main page-->
     <section class="home-page">
 
-      <h1>Joyeria Trust Joy</h1>
+      
 
       <!--CAROUSEL-->
       <div id="carousel" class="row carousel"> 
+        <h1>Joyeria Trust Joy</h1>
         <div class="col">
           <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
@@ -267,12 +272,12 @@
       <div class="col formulario_de_contactos">
         <form class="formulario">
           <h3>contactanos</h3>
-          <input type="text" id="nombre" name="nombre" placeholder="ingrese nombre" />
+          <input id="nombre"type="text" id="nombre" name="nombre" placeholder="ingrese nombre" required/><label id="label_nombre"for=""></label>
           <br>
-          <input type="text" id="email" name="email" placeholder="ingrese un email">
+          <input id="email"type="text" id="email" name="email" placeholder="ingrese un email"required><label id="label_email"for=""></label>
           <br>
-          <textarea id="msg" rows="3" name="user_message" placeholder="ingrese su consulta"></textarea>
-          <button class="btn"type="submit">Enviar</button>
+          <textarea id="msg" rows="3" name="user_message" placeholder="ingrese su consulta"required></textarea>
+          <button class="btn"type="submit" >Enviar</button>
 
 
         </form>
@@ -282,10 +287,10 @@
     </div>
     <div id="footer" class="row footer"><!--footer-->
       <footer>
-        Ciudad Autonoma de Buenos Aires en el bario Parque Chacabuco.Av.asamblea 930,c1424 CABA<br><i
-          class="bi bi-twitter"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-facebook"></i>
+        Ciudad Autonoma de Buenos Aires en el bario Parque Chacabuco.Av.asamblea 930,c1424 CABA<br>
+        <a href="https://www.instagram.com/trust_joy_/"><i class="bi bi-instagram"></i></a> 
+        <a href="https://www.facebook.com/profile.php?id=100091941191163"><i class="bi bi-facebook"></i></a> 
+        <a href="https://twitter.com/"> <i class="bi bi-twitter"></i></a>
       </footer>
     </div>
 

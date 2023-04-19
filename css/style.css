@@ -1,37 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-header{
-    background-color: beige;
-    font-family: Arial, Helvetica, sans-serif;
+header {
+  background-color: beige;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
 
-#container{
-    
-    
-    
-    background: beige;
-    padding: 30px;
-    margin: 100px auto;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-.centrar{
+#container {
+
+
+
+  background: beige;
+  padding: 30px;
+  margin: 100px auto;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
-/* iniciar sesion y registro *//* estilos del login */
+
+.centrar {
+  text-align: center;
+}
+
+/* iniciar sesion y registro */
+/* estilos del login */
 * {
   border-radius: 15px;
 }
-.login{
-  display: none;
-}
 
+
+
+.login {
+  display: none;
+
+}
 
 .container-todo {
 
   height: 100vh;
   width: 100vw;
+}
+
+.fondo_login {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+
+.fondo_login img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .display {
@@ -41,71 +61,93 @@ header{
 }
 
 .container__login__register {
-
+  border: 2px solid rgb(214, 194, 194);
   width: 60%;
   height: 70%;
   position: relative;
   justify-content: start;
+}
 
+#caja-trasera__login-contenedor,
+#iniciar-registro {
+  opacity: 0.8;
 }
 
 .caja-trasera {
   position: absolute;
   display: flex;
-  background-color: rgba(91, 91, 99, 0.883);
+  background-color: rgb(245, 245, 209);
   width: 100%;
   height: 100%;
   justify-content: space-around;
+  opacity: 0.8;
+
 
 }
-
-.caja-trasera__login {
-  opacity: 01;
+#caja-trasera__login-contenedor{
+  opacity: 0;
 }
+
 
 .caja-trasera__login-register {
-  color: rgb(242, 242, 242);
+  color: rgb(0, 0, 0);
   flex-direction: column;
   text-align: center;
   justify-content: center;
+
 }
+
+
 
 .caja-trasera__login-register button,
 .caja-trasera__register h3 {
-  background-color: rgb(149, 150, 241);
+
   border: none;
   padding: 7px;
   cursor: pointer;
+
+
 }
 
 .caja-trasera__login-register h1,
 h2 {
   margin: 20px 0;
+
+
 }
 
 .caja-trasera__login-register button:hover {
-  background-color: rgb(103, 105, 227);
+
   color: aliceblue;
+
+
 }
 
-.caja-trasera__register h3:hover {
-  background-color: rgb(108, 109, 197);
-  color: rgb(252, 234, 234);
+.caja-trasera__register .btn:hover {
+ 
+  color: rgb(0, 0, 0);
+  font-family: 'Playfair Display', serif;
+
+
 }
 
 .formularios {
-  position: absolute;
 
+
+  position: absolute;
   width: 45%;
   height: 110%;
   margin-left: 20px;
   transition: left 500ms;
+  font-family: 'Playfair Display', serif;
+
 }
 
 .container__login-register {
   width: 100%;
   height: 100%;
   position: absolute;
+
 }
 
 .container__register {
@@ -113,47 +155,59 @@ h2 {
 }
 
 .cajas {
-  background-color: rgb(67, 194, 222);
+  background-color: #d4c98a;
   width: 100%;
   height: 100%;
   flex-direction: column;
   text-align: center;
+
 }
 
 .cajas h4 {
   font-size: 14px;
   padding: 0;
   margin: 0;
+  font-family: 'Playfair Display', serif;
+
 }
 
 .cajas input {
   width: 90%;
   margin: 10px;
   text-align: center;
+  font-family: 'Playfair Display', serif;
+
 }
 
 .cajas__registrarse {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Playfair Display', serif;
+
 }
 
 button,
 .cajas h5 {
   cursor: pointer;
+  font-family: 'Playfair Display', serif;
+
 
 }
 
 .cajas h5 {
   padding: 3px;
   color: rgb(20, 20, 184);
-  margin-top: 5px;
-  text-decoration: underline;
+  position: relative;
+  top: 10%;
+
+
+
 }
 
-.cajas h5:hover {
+#iniciar-registro .btn:hover {
 
-  color: #fff;
+  color: #000000;
 }
 
 .cajas h1 {
@@ -163,141 +217,85 @@ button,
 
 @media screen and (max-width: 566px) {
   .container-todo {
+    border: 2px solid red;
 
-      height: 95vh;
-      width: auto;
-      overflow: hidden;
+
+
   }
 
   .display {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .container__login__register {
 
-      width: 100%;
-      height: 100%;
-      position: relative;
-      justify-content: start;
-
-  }
 
   .caja-trasera {
-      display: flex;
-      position: absolute;
-      background-color: rgba(12, 17, 112, 0.883);
-      width: 100%;
-      height: 100%;
-      justify-content: space-around;
-      top: 47%;
-
+    height: 80vh;
+    width: 100%;
   }
-
+  #iniciar-registro h2 ,#caja-trasera__login-contenedor h2{
+    font-size:large;
+  }
+  
   .caja-trasera__login {
-      opacity: 0;
+    opacity: 0;
   }
-
   .caja-trasera__login-register {
-      color: rgb(242, 242, 242);
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
+    height: 50%;
+    position: relative;
+    top: 50%;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
   .caja-trasera__login-register button,
   .caja-trasera__register h3 {
-      background-color: rgb(149, 150, 241);
-      border: none;
-      padding: 7px;
-      cursor: pointer;
-  }
-
-  .caja-trasera__login-register h1,
-  h2 {
-      margin: 20px 0;
-  }
-
-  .caja-trasera__login-register button:hover {
-      background-color: rgb(103, 105, 227);
-      color: aliceblue;
-  }
-
-  .caja-trasera__register h3:hover {
-      background-color: rgb(108, 109, 197);
-      color: rgb(252, 234, 234);
+    background-color: rgba(199, 182, 59, 0.601);
+    border: none;
+    padding: 7px;
+    cursor: pointer;
   }
 
   .formularios {
-      position: absolute;
+    position: absolute;
 
-      width: 95%;
-      height: 50%;
-      transition: bottom 500ms;
-      top: 0%;
-
-      margin: 0 2.5%;
-
-
+    width: 95%;
+    height: 50%;
+    top: -9%;
+    margin: 0 2.5%;
   }
 
   .container__login-register {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-  }
-
-  .container__register {
-      display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
   }
 
   .cajas {
-      background-color: rgb(67, 194, 222);
-      width: 100%;
-      height: 100%;
-      flex-direction: column;
-      text-align: center;
+    height: 130%;
   }
 
   .cajas input {
-      width: 90%;
-      margin: 10px;
-      text-align: center;
-  }
-
-  .cajas__registrarse {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-
-  button,
-  .cajas h5 {
-      cursor: pointer;
+    width: 90%;
+    margin: 10px;
 
   }
 
-  .cajas h5 {
-      padding: 3px;
-      color: rgb(20, 20, 184);
-      margin-top: 5px;
-      text-decoration: underline;
-  }
-
-  .cajas h5:hover {
-
-      color: #fff;
-  }
-
-  .cajas h1 {
-      width: auto;
+  .caja-trasera__login-contenedor .btn {
+    width: auto;
 
   }
+
+
+
+
 }
 
 /* aca termina los estilos de la solapa de incio de sesion y registrar sesion */
-
 
 
 
