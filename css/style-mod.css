@@ -14,6 +14,10 @@ section.home-page {
     justify-content: space-around;
 }
 
+section#articulos {
+    margin-bottom: 4rem;
+}
+
 header {
     position: sticky;
     width: 100%;
@@ -125,8 +129,15 @@ b {
     padding: 1rem 2rem;
 }
 
+.btn-mod-login, #chart-btn {
+    padding: 1.5rem;
+    font-size: 20px;
+}
+
 .btn-mod-login {
     width: 40%;
+    padding: 1.8rem;
+    font-size: 20px;
 }
 
 
@@ -294,6 +305,22 @@ b {
         width: 80%;
         height: 70px;
     }
+
+
+    section#personal-empresa {
+        background-color: #F5F5DC;
+    }
+
+    .card-personal {
+        width: 500px;
+        margin: auto;
+        margin-top: 5rem;
+        padding: 2rem;
+        
+        text-align: center;
+    }
+
+   
 
 /********************************************************************************************************************/
 

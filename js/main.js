@@ -10,6 +10,7 @@ const navegador = document.getElementById("navegador")
 const carousel = document.getElementById("carousel")
 const separador_del_medio = document.getElementById("separador_del_medio")
 const articulos=document.getElementById("articulos")
+const personalEmpresa = document.querySelector('#personal-empresa')
 const donde_estamos=document.getElementById("donde-estamos")
 const formulario_de_contacto = document.getElementById("formulario_de_contacto")
 const footer = document.getElementById("footer")
@@ -19,13 +20,14 @@ const footer = document.getElementById("footer")
 function iniciarLogin() {
     const login = document.getElementById("container-login");
     login.style.display = "block";
-    navegador.style.display = "none"
-    carousel.style.display = "none"
-    separador_del_medio.style.display = "none"
-    donde_estamos.style.display="none"
-    articulos.style.display="none"
-    formulario_de_contacto.style.display = "none"
-    footer.style.display = "none"
+    personalEmpresa.style.display = "none";
+    navegador.style.display = "none";
+    carousel.style.display = "none";
+    separador_del_medio.style.display = "none";
+    donde_estamos.style.display="none";
+    articulos.style.display="none";
+    formulario_de_contacto.style.display = "none";
+    footer.style.display = "none";
 
 }
 
@@ -33,13 +35,14 @@ function finalizarLogin() {
     const login = document.getElementById("container-login");
     if (window.innerWidth > 566) {
         login.style.display = "none";
-        navegador.style.display = "block"
-        carousel.style.display = "block"
-        separador_del_medio.style.display = "block"
-        donde_estamos.style.display="flex"
-        articulos.style.display="flex"        
-        formulario_de_contacto.style.display = "flex"
-        footer.style.display = "block"
+        personalEmpresa.style.display = "flex";
+        navegador.style.display = "block";
+        carousel.style.display = "block";
+        separador_del_medio.style.display = "block";
+        donde_estamos.style.display="flex";
+        articulos.style.display="flex";     
+        formulario_de_contacto.style.display = "flex";
+        footer.style.display = "block";
 
     }
     else {
