@@ -106,7 +106,7 @@ form.addEventListener("submit",e=>{
     if(!regexEmail.test(email.value)){
         advertencia+="el email que ingreso no es correcto"
         entrar=true
-console.log("asd");
+        console.log("asd");
     }
     if(entrar){
         label_nombre.innerHTML=advertencia

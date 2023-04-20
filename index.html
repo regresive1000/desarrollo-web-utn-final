@@ -69,23 +69,23 @@
                 <div class="all-steps" id="all-steps"> <span class="step"></span> <span class="step"></span> <span class="step"></span> </div>
 
                 <div class="tab caja-tab">
-                  <input class="input" type="text" value="" placeholder="Usuario" required>
-                  <input class="input" type="email" value="" placeholder="E-mail" required>
+                  <input id="usuario-register" class="input" type="text" value="" placeholder="Usuario" required>
+                  <input id="email-register" class="input" type="email" value="" placeholder="E-mail" required>
 
 
                 </div>
 
                 <div class="tab caja-tab">
-                  <input type="text" value="" placeholder="Nombre" required>
-                  <input type="text" value="" placeholder="Apellido" required>
-                  <input type="number" placeholder="Telefono">
+                  <input id="nombre-register" type="text" value="" placeholder="Nombre" required>
+                  <input id="apellido-register" type="text" value="" placeholder="Apellido" required>
+                  <input id="telefono-register" type="number" placeholder="Telefono">
 
                 </div>
 
                 <div class="tab caja-tab">
                   
-                  <input type="password" placeholder="Ingrese una contraseña">
-                  <input type="password" placeholder="Confirme la contraseña">
+                  <input id="password-register" type="text" placeholder="Ingrese una contraseña">
+                  <input id="password-confirmado-register" type="password" placeholder="Confirme la contraseña">
 
                 </div>
                 <div class="thanks-message text-center" id="text-message">
@@ -100,10 +100,10 @@
             </div>
             <!--Login-->
             <div id="login" class=" container__login container__login-register display">
-              <form class="cajas  display" action="">
+              <form class="cajas  display form-login" action="">
                 <h2>Iniciar sesion</h2>
-                <input id="input-email-user" type="text" value="" placeholder="E-mail"required>
-                <input id="input-email-user" type="password" value="" placeholder="Constraceña"required>
+                <input id="input-email-user" type="email" value="" placeholder="E-mail"required>
+                <input id="input-password-user" type="password" value="" placeholder="Constraceña"required>
                 <button class="btn">Login</button>
                 <h5 onclick="finalizarLogin()">quizas en otro momento</h5>
               </form>

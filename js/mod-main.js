@@ -263,17 +263,111 @@ chartBtn.onclick = function () { // Muestra el carrito o lo oculta
     
 }
 
+// Validación forms
+
+const formContact = document.querySelector(".formulario");
+const formLogin = document.querySelector('.form-login');
+const formRegister = document.querySelector('#regForm')
+const nextBtnRegister = document.querySelector('#nextBtn');
+const prevBtnRegister = document.querySelector('#prevBtn');
+const loginEmail = document.querySelector('#input-email-user');
+const loginPassword = document.querySelector('#input-password-user');
+const usuarioRegister = document.querySelector('#usuario-register');
+const emailRegister = document.querySelector('#email-register');
+const nombreRegister = document.querySelector('#nombre-register');
+const apellidoRegister = document.querySelector('#apellido-register');
+const telefonoRegister = document.querySelector('#telefono-register');
+const passwordRegister = document.querySelector('#password-register');
+const passwordConfirmadoRegister = document.querySelector('#password-confirmado-register');
+
+formContact.addEventListener('submit', evt => { evt.preventDefault();})
+
+
+formLogin.addEventListener('submit', formLoginFn);
+formRegister.addEventListener('change', formRegisterFn);
+formRegister.addEventListener('keydown', formRegisterFn);
+formRegister.addEventListener('keyup', formRegisterFn);
+formRegister.addEventListener('keyup', formRegisterFn);
+
+nextBtnRegister.addEventListener('click', () => {if(!nextBtnRegister.disabled){countRegisterForm++; nextBtnRegister.disabled = true;}});
+prevBtnRegister.addEventListener('click', () => {countRegisterForm--});
+
+function formLoginFn(evt) {
+    
+    evt.preventDefault();
+    if(loginPassword.value.length < 6) {
+        alert('La contraseña debe tener almenos 6 caracteres');
+        return;
+    }
+
+    if(loginPassword.value.length > 6) {
+        alert('¡Bienvenido!');
+        formLogin.submit();
+        finalizarLogin();
+    }
+}
+
+let countRegisterForm = 0;
+let registerStep1Validate = false;
+let registerStep2Validate = false;
+let registerStep3Validate = false;
+
+function formRegisterFn() {
+    let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+    console.log(countRegisterForm)
+    switch (countRegisterForm) {
+        
+        case 0:
+            nextBtnRegister.disabled = true;
+            if(!regexEmail.test(emailRegister.value)){
+                return;
+            }
+            registerStep1Validate=true;
+            nextBtnRegister.disabled = false;
+            break;
+
+        case 1:
+            nextBtnRegister.disabled = true;
+            if(nombreRegister.value.length < 3 || apellidoRegister.value.length < 3 || telefonoRegister.value.length < 6){
+                return;
+            }
+            registerStep2Validate=true;
+            nextBtnRegister.disabled = false;
+            break;
+
+        case 2:
+            nextBtnRegister.disabled = true;
+            let pass1 = passwordRegister.value;
+            let pass2 = passwordConfirmadoRegister.value;
+            
+            if( pass1 !== pass2 || pass1.length < 3 || pass2.length < 3){
+                return;
+            }
+            registerStep3Validate=true;
+            nextBtnRegister.disabled = false;
+            break;
+
+        default:
+            console.log('Default')
+      }
+
+      
+      
+}
+
 
 /////////////////////////////////////////////////////////////////////
 // Codigo Wizzard register 
 
-//your javascript goes here
 var currentTab = 0;
 document.addEventListener("DOMContentLoaded", function(event) {
 
 
     showTab(currentTab);
     const form = document.getElementById("regForm");
+    
+    
     form.addEventListener('submit', (event) => { event.preventDefault(); })
 });
 
