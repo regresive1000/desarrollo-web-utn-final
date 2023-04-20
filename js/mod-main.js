@@ -7,11 +7,13 @@ const sectionProducts = document.querySelector('#articulos');
 const chartBtn = document.querySelector('#chart-btn');
 const chartResult = document.querySelector('#chart-result');
 
-
+// Carrito del JS
 let chartArr = [];
 
+
+// Manejo del carrito en JS y actualiza el localStorage
 class Chart {
-    addItemChart(product) {
+    addItemChart(product) { //Añade item al carrito y actualiza LS
         const { id } = product;
         if(verifyItemIDLS(id) || null) {
             product.quantity++;
@@ -32,9 +34,10 @@ class Chart {
 
 }
 
+// Manejo de la interfaz de usuario, 
 class UI {
 
-    printProductsMain(data) {
+    printProductsMain(data) { // imprime los elementos en el body del documento
         data.forEach( product => {
             const { id, title, price, description, category, image, cuantity } = product;
 
@@ -86,7 +89,7 @@ class UI {
         });
     }
 
-    printChartProducts() {
+    printChartProducts() { // Dibuja los elementos en el carrito
         cleanHTML(chartResult);
         // Comprueba si hay algo en el carrito para print
         if(!verifyLSChart()) { return }
@@ -174,22 +177,22 @@ class UI {
 
 
 }
-// Instance
+// Instance de las clases e inicio de la petición AJAX
 
 const ui = new UI();
 const chart = new Chart();
-initProducts();
+initProducts(); // hace la primera petición AJAX para manejar los datos de las joyas
 
 
 
 // Functions
 
 
-function updateLS() {
+function updateLS() { // Updatea los elementos del carrito de JS al localStorage
     localStorage.setItem('chart', JSON.stringify(chartArr));
 }
 
-function verifyLSChart() {
+function verifyLSChart() { // Verifica que el LS este lleno o vacio
     const productosLS = getLSChart();
     if( productosLS === null || productosLS === undefined || productosLS === false){
         return false;
@@ -197,17 +200,17 @@ function verifyLSChart() {
     return productosLS.some(e => {return e});
 }
 
-function getLSChart() {
+function getLSChart() { // Pide al navegador los elementos del LocalStorage
     return JSON.parse( localStorage.getItem('chart') );
 }
 
-function verifyItemIDLS(id) {
+function verifyItemIDLS(id) { // Verifica si cierta joya existe en el LocalStorage
     const productosLS = getLSChart() ?? [];
     return productosLS.some(el => el.id === id);
 }
 
-async function initProducts() {
-    chartArr = getLSChart() ?? [];
+async function initProducts() { // Inicia la petición ajax
+    chartArr = getLSChart() ?? []; // Si hay elementos en el LocalSotaje los trae al carrito para posteriormente ser impresos en el DOM
     const url = 'https://fakestoreapi.com/products/category/jewelery';
 
     await $.ajax(url,   // request url
@@ -217,10 +220,10 @@ async function initProducts() {
 				}
 			});
 
-    ui.printChartProducts()
+    ui.printChartProducts() // Imprime los elementos en el carrito
 }
 
-function changeQuantityChart(id, quantity) {
+function changeQuantityChart(id, quantity) { //Manejo de la cantidad de elementos en el carrito
    
     const arrTemp = chartArr.filter( el => {
         if(el.id === id) {
@@ -233,13 +236,13 @@ function changeQuantityChart(id, quantity) {
     chartArr = [...arrTemp];
 }
 
-function cleanHTML(parentE) {
+function cleanHTML(parentE) { // Limpia los elementos hijos del padre
     while(parentE.firstChild) {
         parentE.removeChild(parentE.firstChild);
     }
 }
 
-function removeChartProduct(id) {
+function removeChartProduct(id) { // remueve el elemento del carrito de JS
     chartArr = chartArr.filter(el => {
         if(el.id === id) {
             return
@@ -249,7 +252,7 @@ function removeChartProduct(id) {
 }
 
 //function onclick
-chartBtn.onclick = function () {
+chartBtn.onclick = function () { // Muestra el carrito o lo oculta
     const result = document.querySelector('#chart-result');
     
     if(result.classList[0] === 'd-none') {
