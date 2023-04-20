@@ -36,7 +36,7 @@
               <div id="caja-trasera__login-contenedor" class="caja-trasera__login-contenedor">
                 <h2>¿Ya tienes una cuenta?</h2>
                 <h2>Inicia sesion para entrar en la pagina</h2>
-                <button class="btn"onclick="iniciaSesion()">inicia sesion</button>
+                <button class="btn"onclick="iniciaSesion()">Inicia sesion</button>
               </div>
             </div>
             <div id="caja-trasera__register" class="caja-trasera__register caja-trasera__login-register display">
@@ -52,7 +52,8 @@
           <div id="formularios" class="formularios display">
             <!--Register-->
             <div id="register" class=" container__register container__login-register display">
-              <form class="cajas display" action="asd">
+              <form id="regForm" class="cajas display" action="#">
+                <!--
                 <h2>registrarse</h2>
                 <input type="text" value="" placeholder="nombre" required>
                 <input type="email" value="" placeholder="email"required>
@@ -62,15 +63,48 @@
                 <input type="password" value="" name="" id=""required >
                 <button class="btn">registrarse</button>
                 <h5 onclick="finalizarLogin()">quizas en otro momento</h5>
+                -->
+
+                <h2 id="registerH1">Registrarse</h2>
+                <div class="all-steps" id="all-steps"> <span class="step"></span> <span class="step"></span> <span class="step"></span> </div>
+
+                <div class="tab caja-tab">
+                  <input class="input" type="text" value="" placeholder="Usuario" required>
+                  <input class="input" type="email" value="" placeholder="E-mail" required>
+
+
+                </div>
+
+                <div class="tab caja-tab">
+                  <input type="text" value="" placeholder="Nombre" required>
+                  <input type="text" value="" placeholder="Apellido" required>
+                  <input type="number" placeholder="Telefono">
+
+                </div>
+
+                <div class="tab caja-tab">
+                  
+                  <input type="password" placeholder="Ingrese una contraseña">
+                  <input type="password" placeholder="Confirme la contraseña">
+
+                </div>
+                <div class="thanks-message text-center" id="text-message">
+                  <h3>¡Gracias por registrarte con nosotros!</h3> <span>El registro se ha realizado con exito</span>
+                  <h5 onclick="finalizarLogin()">Volver a la página principal</h5>
+                </div>
+                
+                <div id="nextprevious" class="d-flex justify-content-center">
+                  <div style="float:right;"> <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="btn btn-primary btn-form">Anterior</button> <button class="btn btn-primary btn-form" type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button> </div>
+                </div>
               </form>
             </div>
             <!--Login-->
             <div id="login" class=" container__login container__login-register display">
               <form class="cajas  display" action="">
-                <h2>iniciar sesion</h2>
-                <input type="text" value="" placeholder="nombre de usuario"required>
-                <input type="password" value="" placeholder="constraceña"required>
-                <button class="btn">login</button>
+                <h2>Iniciar sesion</h2>
+                <input id="input-email-user" type="text" value="" placeholder="E-mail"required>
+                <input id="input-email-user" type="password" value="" placeholder="Constraceña"required>
+                <button class="btn">Login</button>
                 <h5 onclick="finalizarLogin()">quizas en otro momento</h5>
               </form>
             </div>
@@ -149,7 +183,7 @@
         <div class="col-6 col-md-4 columna-carrito">
           
           <a class="btn btn-primary" id="chart-btn">
-            <img src="./assets/shopping-cart.png" alt="carrito de compra" class="img-cart">
+            <i class="bi bi-cart2"></i>
             Cart</a>
           <div id="chart-result" class="d-none">
                
@@ -171,7 +205,7 @@
 
       <!--CAROUSEL-->
       <div id="carousel" class="row carousel"> 
-        <h1>Joyeria Trust Joy</h1>
+        <h1 id="main-title">Joyeria Trust Joy</h1>
         <div class="col">
           <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
@@ -274,11 +308,11 @@
       <div class="col formulario_de_contactos">
         <form class="formulario">
           <h3>contactanos</h3>
-          <input id="nombre"type="text" id="nombre" name="nombre" placeholder="ingrese nombre" required/><label id="label_nombre"for=""></label>
+          <input id="nombre"type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required/><label id="label_nombre"for=""></label>
           <br>
-          <input id="email"type="text" id="email" name="email" placeholder="ingrese un email"required><label id="label_email"for=""></label>
+          <input id="email"type="text" id="email" name="email" placeholder="Ingrese su email"required><label id="label_email"for=""></label>
           <br>
-          <textarea id="msg" rows="3" name="user_message" placeholder="ingrese su consulta"required></textarea>
+          <textarea id="msg" rows="3" name="user_message" placeholder="Ingrese su consulta"required></textarea>
           <button class="btn"type="submit" >Enviar</button>
 
 
@@ -309,6 +343,7 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
   <!--bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>

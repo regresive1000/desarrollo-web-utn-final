@@ -160,7 +160,8 @@ h2 {
   height: 100%;
   flex-direction: column;
   text-align: center;
-
+  justify-content: center;
+  align-items: center;
 }
 
 .cajas h4 {
@@ -177,6 +178,10 @@ h2 {
   text-align: center;
   font-family: 'Playfair Display', serif;
 
+}
+
+input[type="number"] {
+  width: 100%;
 }
 
 .cajas__registrarse {
